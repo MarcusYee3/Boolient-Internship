@@ -1,6 +1,7 @@
 import json
+# Smaller code snippet from the main users.py file
+# Sample data has been provided to protect client confidentiality
 
-# Example raw data (this would normally come from a database or CSV)
 raw_users = [
     {
         "user_id": "U001",
@@ -25,7 +26,7 @@ raw_users = [
     }
 ]
 
-# Transform into hierarchical JSON
+
 users_json = {}
 
 for entry in raw_users:
@@ -43,7 +44,7 @@ for entry in raw_users:
     users_json[uid]["claims"].add(entry["claim_id"])
     users_json[uid]["remit_info"].add(entry["remit_id"])
 
-# Convert sets back to lists for JSON serialization
+
 for uid in users_json:
     users_json[uid]["subaccounts"] = list(users_json[uid]["subaccounts"])
     users_json[uid]["claims"] = list(users_json[uid]["claims"])
