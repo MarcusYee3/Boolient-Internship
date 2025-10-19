@@ -1,6 +1,4 @@
 import json
-# Smaller code snippet from the main users.py file
-# Sample data has been provided to protect client confidentiality
 
 raw_users = [
     {
